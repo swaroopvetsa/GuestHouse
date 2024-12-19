@@ -15,15 +15,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen bg-cover bg-center bg-[url('src/assets/home.webp')] relative">
-           
-    <div className="py-4 bg-none" >
+    <div className="nav">
+    <div className="py-6 bg-none" >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="">
           <p className="text-lg font-semibold">
             Kingsukh 
-            <br /><span className="text-orange-800">
+            <br /><span className="text-pink-800">
               <a href="/">Guest House</a></span>
           </p>
         </div>
@@ -37,7 +36,7 @@ const Navbar = () => {
         <div className="hidden md:block">
           <a
             href="https://www.apple.com"
-            className="bg-primary text-white px-4 py-2 rounded-xl hover:bg-secondary transform transition-transform duration-9600 hover:-translate-y-2 hover:text-black"
+            className="bg-pink-600 text-white p-6 py-3 rounded-xl hover:bg-secondary transform transition-transform duration-9600 hover:-translate-y-2 hover:text-black"
           >
             BOOK NOW
           </a>
@@ -56,11 +55,8 @@ const Navbar = () => {
         <Nav2 />
       )}
     </div>
-    <div className="text-center pt-40 ">
-      <p className="text-xl text-slate-300">Simple - Unique - Friendly<br /><br /></p>
-      <p className="text-6xl text-white ">Make Yourself At Home<br/>In Our <a href="/" className="text-red-500">Guest House</a>.</p>
-    </div> 
     </div>
+    
   );
 };
 
