@@ -4,8 +4,8 @@ import '../../assets/about.jpg'
 const About = () => {
   return (
   <div className="about mt-10 p-32">
-    <div className='flex justify-between items-center gap-5 px-10'>
-      <div className='w-1/2'>
+    <div className='flex justify-between items-center gap-5 px-10 md:flex flex-row'>
+      <div className='hidden w-1/2 sm:flex'>
         <img src="src\assets\about.jpg" alt="About us image" className=' rounded-lg max-h-[80vh] ' />
       </div>
       <div className='w-1/2 flex flex-col justify-items-start gap-4' >
