@@ -17,13 +17,13 @@ const rooms = [
     price: 'Rs. 2000/night',
     image: 'src/assets/large.jpg',
   },
-  {
-    id: 3,
-    title: 'FAMILY RETREAT ROOM',
-    description: 'Perfect for families, this spacious retreat offers all the comforts of home for a memorable stay.',
-    price: 'Rs. 1500/night',
-    image: 'src/assets/small.jpg',
-  },
+  // {
+  //   id: 3,
+  //   title: 'FAMILY RETREAT ROOM',
+  //   description: 'Perfect for families, this spacious retreat offers all the comforts of home for a memorable stay.',
+  //   price: 'Rs. 1500/night',
+  //   image: 'src/assets/small.jpg',
+  // },
   // {
   //   id: 4,
   //   title: 'SUNSET VILLA',
@@ -52,7 +52,7 @@ const Living = () => {
               <p className='text-gray-600 mb-5 mr-12'>
                 Starting from <span className='text-black font-semibold'>{room.price}</span>
               </p>
-              <button type="button" className='bg-pink-600 text-center font-semibold p-2 rounded-lg w-1/3'>BOOK</button>
+              <button type="button" className='bg-pink-600 text-center font-semibold p-2 rounded-lg w-1/3 mb-6'>BOOK</button>
             </div>
           </div>
         ))}

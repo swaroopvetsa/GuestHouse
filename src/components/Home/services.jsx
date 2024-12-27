@@ -5,7 +5,7 @@ import { FaLock, FaConciergeBell, FaUtensils, FaMapSigns } from 'react-icons/fa'
 
 const Services = () => {
   return (
-    <div className='w-full h-screen pt-24'>
+    <div className='w-full h-screen pt-20'>
         <div className="w-full h-4/5 bg-cover bg-center bg-[url('src/assets/palash.webp')] relative">
             <div className='bg-white px-16 shadow-lg absolute lg:right-40 lg:top-0 lg:bottom-0 lg:w-2/5 h-full flex flex-col justify-center animate-fadeIn'>
                 <p className='text-2xl font-normal font-serif mb-3'>SERVICES  _____</p>

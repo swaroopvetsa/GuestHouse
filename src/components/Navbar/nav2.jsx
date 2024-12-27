@@ -2,8 +2,8 @@ import React from "react";
 
 function nav2() {
   return (
-    <div className="md:hidden mt-4 bg-pink-500 sticky">
-      <ul className="flex flex-col items-center gap-2 transition-transform duration-300 ease-in-out">
+    <div className="md:hidden mb-[-130px] bg-pink-500 ">
+      <ul className="flex flex-col items-center gap-4 py-2 transition-transform duration-300 ease-in-out">
         {["Home", "About", "Services", "Rooms", "Gallery", "Contact"].map(
           (item, index) => (
             <li
