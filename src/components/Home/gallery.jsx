@@ -12,7 +12,7 @@ import Tenth from '../../assets/mithonDam.webp'
 
 const Gallery = () => {
   return (
-    <div className='h-screen'>
+    <div className=' h-[100%] md:h-screen'>
       <p className='text-center mb-8 font-serif text-xl'>GALLERY ____</p>
       <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 grid-rows-4">
         <img src={One} className="col-span-1 row-span-2 h-96 w-full object-cover" />

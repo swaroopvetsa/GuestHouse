@@ -70,14 +70,14 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div>
-      <div className="bg-black w-full h-auto p-8 md:p-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+    <div className='bg-black '>
+      <div className="bg-black w-full h-auto p-8 md:px-24 md:pt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Section 1: About */}
-        <div className="p-4 flex flex-col gap-4">
-          <p className="font-semibold text-lg text-white leading-tight">
+        <div className="p-4 flex flex-col gap-10">
+          <p className="font-semibold text-xl text-white uppercase">
             Kingsukh <br /> Guest <br /> House
           </p>
-          <p className="text-gray-400 font-light text-sm md:text-base leading-relaxed">
+          <p className="text-stone-600 text-pretty text-sm md:text-base leading-relaxed">
             Discover a world of comfort, luxury, and adventure as you explore our curated selection of hotels, making every moment of your getaway truly extraordinary.
           </p>
           <button className="bg-pink-600 w-full sm:w-36 font-semibold text-sm md:text-base text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition-transform duration-300 hover:-translate-y-1 hover:text-black">
@@ -87,8 +87,8 @@ const Footer = () => {
 
         {/* Section 2: Quick Links */}
         <div className="p-4 flex flex-col">
-          <p className="font-semibold text-lg text-white">QUICK LINKS</p>
-          <ul className="text-gray-400 font-light text-sm md:text-base leading-loose mt-4">
+          <p className="font-semibold text-xl text-white">QUICK LINKS</p>
+          <ul className="text-gray-400 font-light text-sm md:text-lg leading-loose mt-4">
             <li>
               <a href="#" className="hover:text-white">Browse Destinations</a>
             </li>
@@ -155,9 +155,9 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <p className="text-black text-center text-xs md:text-sm mt-6 mb-4">
-        Copyright © 2024 Kingsukh Guest House. All rights reserved.
-      </p>
+      <div className="bg-black text-center text-xs md:text-sm mt-6 pb-4">
+        <p className=' text-lg text-gray-400'>Copyright © 2024 Kingsukh Guest House. All rights reserved.</p>
+      </div>
     </div>
   );
 };
