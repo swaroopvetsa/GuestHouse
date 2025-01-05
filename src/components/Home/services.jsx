@@ -36,7 +36,7 @@ const Services = () => {
   }, [listItemRefs]);
 
   return (
-    <div className="w-full h-screen pt-20">
+    <div id='services' className="w-full h-screen pt-20">
       <div className="w-full h-4/5 bg-cover bg-center bg-[url('src/assets/palash.webp')] relative">
         <div
           ref={headingRef}
@@ -69,12 +69,12 @@ const Services = () => {
           </ul>
         </div>
       </div>
-      <div className="grid grid-cols-1 px-32 py-20 md:grid-cols-2">
-        <div className="px-24 py-6 text-center font-semibold text-3xl">
+      <div className="grid grid-cols-1 px-32 py-[-10] md:py-20 md:grid-cols-2">
+        <div className="px-24 py-4 text-center font-semibold text-3xl">
           100+<br />
           <span className="font-medium text-lg text-slate-500">Bookings Completed</span>
         </div>
-        <div className="px-24 py-6 text-center font-semibold text-3xl">
+        <div className="px-24 py-4 text-center font-semibold text-3xl">
           150+<br />
           <span className="font-medium text-lg text-slate-500">Happy Customers</span>
         </div>

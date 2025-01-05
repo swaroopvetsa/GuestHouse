@@ -52,7 +52,7 @@ const Living = () => {
   }, [roomRefs]);
 
   return (
-    <div className="px-8 sm:px-16 lg:px-32 py-8">
+    <div id='rooms' className="px-8 sm:px-16 lg:px-32 py-8">
       <div
         ref={headingRef}
         className={`transition-opacity duration-1000 ${

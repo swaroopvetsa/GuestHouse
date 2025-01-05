@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 const About = () => {
   const [refHeading, inViewHeading] = useInView({ triggerOnce: true, threshold: 0.5 });
   const [refAddress,] = useInView({ triggerOnce: true, threshold: 0.5 });
-  const [refParagraph,] = useInView({ triggerOnce: true, threshold: 0.5 });
+  // const [refParagraph,] = useInView({ triggerOnce: true, threshold: 0.5 });
 
   const [triggerAddressAnimation, setTriggerAddressAnimation] = useState(false);
   const [triggerParagraphAnimation, setTriggerParagraphAnimation] = useState(false);
@@ -20,16 +20,25 @@ const About = () => {
   }, [inViewHeading]);
 
   useEffect(() => {
-    if (triggerAddressAnimation) {
+    if (inViewHeading) {
+      const paragraphTimer = setTimeout(() => {
+        setTriggerParagraphAnimation(true);
+      }, 2000); // Adjust delay for address animation
+      return () => clearTimeout(paragraphTimer);
+    }
+  }, [inViewHeading]);
+
+  useEffect(() => {
+    if (triggerParagraphAnimation) {
       const paragraphTimer = setTimeout(() => {
         setTriggerParagraphAnimation(true);
       }, 1000); // Adjust delay for address animation
       return () => clearTimeout(paragraphTimer);
     }
-  }, [triggerAddressAnimation]);
+  }, [triggerParagraphAnimation]);
 
   return (
-    <div className="about mt-10 p-4 md:p-16">
+    <div id='about' className="about mt-16 p-4 md:p-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
         {/* Image Section */}
         <div className="w-full flex justify-center md:justify-end">
@@ -37,7 +46,7 @@ const About = () => {
             ref={refHeading}
             src="src/assets/about.jpg"
             alt="About us"
-            className={`rounded-xl w-60 max-h-[85vh] md:w-4/5 object-fill ${
+            className={`rounded-xl w-60 max-h-[90vh] md:w-4/5 object-fill ${
               inViewHeading ? 'animate-fadeLeft opacity-100' : 'opacity-20'
             }`}
             style={{ animationFillMode: 'forwards' }}
@@ -57,25 +66,25 @@ const About = () => {
           </p>
           <p
             className={`font-bold text-3xl md:text-4xl md:pr-7 leading-snug ${
-              inViewHeading ? 'animate-slide-from-bottom opacity-100' : 'opacity-0'
+              inViewHeading ? 'animate-fadeToDown opacity-100' : 'opacity-0'
             }`}
             style={{ animationFillMode: 'forwards' }}
           >
             The Best Holidays Start Here!
           </p>
           <p
-            ref={refAddress}
+            ref={refHeading}
             className={`text-gray-500 text-base md:font-normal leading-relaxed ${
-              triggerAddressAnimation ? 'animate-fadeToDown opacity-100' : 'opacity-0'
+              triggerParagraphAnimation ? 'animate-fadeToDown opacity-100' : 'opacity-0'
             }`}
             style={{ animationFillMode: 'forwards' }}
           >
             Embark on a tranquil journey at our Kingsukh Guest House, enveloped by the scenic allure of Biharinath Hill, Baranti Hill, Susunia Hill, Joychandi Hill, Garhpanchkot, Baranti Dam, Maithon Dam, and the captivating Panchat Dam. Revel in the embrace of comfort, relish delightful meals, and unwind in our verdant garden oasis. Your ideal retreat beckons, promising a harmonious blend of nature beauty and heartfelt hospitality. Explore the hidden gems of Purulia, creating memories that linger long after your stay.
           </p>
           <p
-            ref={refParagraph}
+            ref={refAddress}
             className={`${
-              triggerParagraphAnimation ? 'animate-fadeToDown opacity-100' : 'opacity-0'
+              triggerAddressAnimation ? 'animate-fadeToDown opacity-100' : 'opacity-0'
             }`}
             style={{ animationFillMode: 'forwards' }}
           >

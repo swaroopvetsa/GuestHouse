@@ -24,7 +24,7 @@ const Home = () => {
         <Navbar />
 
         {/* Middle text */}
-        <div className="block text-center pt-40 sm:text-sm">
+        <div id='home' className="block text-center pt-40 sm:text-sm">
           <p
             ref={ref1}
             className={`text-xl text-slate-300 font-serif ${

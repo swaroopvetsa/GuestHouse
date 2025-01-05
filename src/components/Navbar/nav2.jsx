@@ -10,7 +10,12 @@ function nav2() {
               key={index}
               className="uppercase cursor-pointer transition-transform duration-300 transform hover:scale-105 text-black rounded px-2"
             >
-              {item}
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="block"
+              >
+                {item}
+              </a>
             </li>
           )
         )}

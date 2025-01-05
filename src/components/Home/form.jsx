@@ -90,7 +90,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Form = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-center items-center h-[200%] md:h-screen bg-white relative m-12">
+    <div className="flex flex-col-reverse md:flex-row justify-center items-center h-[250%] md:h-screen bg-white relative m-16 md:m-12">
       {/* Contact Info Section */}
       <div className="h-auto md:h-[70%] bg-pink-500 p-8 rounded-3xl w-[70%] md:w-1/4 md:absolute md:pl-8 md:left-28">
         <div className="pt-8">
@@ -130,7 +130,7 @@ const Form = () => {
 
       {/* Send Message Form Section */}
       <div className="w-[90%] my-10 md:w-[70%] h-[90%] md:h-[80%] py-12 md:ml-16 ml-0 shadow-2xl rounded-2xl bg-white    overflow md:overflow-hidden flex flex-col md:flex-col">
-        <div className="px-6 pl-[10%] sm:pl-[33%] pt-[3%] text-lg">
+        <div className="px-6 md:pl-[30%] pl-[10%] pt-[3%] text-lg">
           <h2 className="text-2xl font-semibold font-serif text-pink-500 mb-6">Send a Message</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 pt-0 text-lg md:pt-0">
             <input
